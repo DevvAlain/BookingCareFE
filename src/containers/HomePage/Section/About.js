@@ -18,8 +18,8 @@ class About extends Component {
                     <iframe width="100%" height="500px" 
                         src="https://www.youtube.com/embed/20J22j8Q8js" 
                         title="T1 - FAKER &amp; CKTG 2023 | HỒI 13 CKTG - TUYỆT TÁC CHO HÀNH TRÌNH 10 NĂM" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     </div>
                     <div className='content-right'>
                         <p>
