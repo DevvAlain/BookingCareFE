@@ -1,0 +1,79 @@
+.doctor-detail-wrapper {
+    background-color: #f7f8fa;
+    padding: 40px 0;
+}
+
+.doctor-detail-container {
+    max-width: 1550px;
+    margin: auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.doctor-intro {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    .doctor-image {
+        flex: 0 0 160px;
+        height: 160px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        margin-right: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .doctor-info {
+        flex: 1;
+
+        .doctor-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .doctor-description {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #666;
+        }
+    }
+}
+
+.doctor-schedule {
+    padding: 20px 0;
+    margin-bottom: 30px;
+    display: flex;
+    height: 340px;
+
+    .content-left {
+        width: 50%;
+    }
+
+    .content-right {
+        width: 50%;
+
+    }
+}
+
+.doctor-detail-info {
+    padding: 20px;
+    font-size: 16px;
+    color: #444;
+
+    p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+}
+
+.doctor-comments {
+    padding: 20px 0;
+}

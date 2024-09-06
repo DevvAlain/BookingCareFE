@@ -36,6 +36,9 @@
             "manage-specialty": "Manage Specialties",
             "handbook": "Handbook",
             "manage-handbook": "Manage Handbook"
+        },
+        "doctor": {
+            "manage-schedule": "Manage Doctor's schedule"
         }
     },
     "manage-user": {
@@ -50,7 +53,62 @@
         "position": "Position",
         "role": "Role",
         "save": "Save",
-        "image": "Image"
+        "image": "Image",
+        "edit": "Edit"
+    },
+    "homepage": {
+        "outstanding-doctor" : "Featured Doctor of the Week",
+        "see-more": "See more"
+    },
+    "manage-schedule": {
+        "title": "Manage your doctor's appointment schedule",
+        "select-doctor": "Select Doctor",
+        "select-date": "Select date",
+        "save": "Save schedule"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Schedule",
+            "notification": "No appointments available at this time, please choose another time",
+            "choose": "Chose ",
+            "book-free": " and book (free)"
+        },
+        "extra-info-doctor": {
+            "text-address" : "ADDRESS FOR EXAMINATION",
+            "price": "Examination price:",
+            "detail": "See details",
+            "payment": "Payment of fees by:",
+            "hide-price": "Hide price list"
+        },
+        "booking-modal": {
+            "title": "Medical appointment information",
+            "fullName": "Full name ",
+            "phoneNumber": "Phone number",
+            "email": "Email address",
+            "address": "Contact address",
+            "reason": "Reason for medical examination",
+            "birthday": "Ngày tháng năm sinh",
+            "gender":"Gender",
+            "confirm": "Confirm",
+            "cancel": "Cancel",
+            "priceBooking": "Order then lose 5 tires",
+            "price": "Examination price: "
+        }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Create information doctor",
+            "select-doctor": "Select Doctor",
+            "intro": "Introduction Information",
+            "save": "Save information",
+            "create": "Create information",
+            "price": "Price",
+            "payment": "Payment",
+            "province": "Province",
+            "name-clinic": "Clinic's name",
+            "address-clinic": "Clinic's address",
+            "note": "Note"
+        }
     }
 
 }

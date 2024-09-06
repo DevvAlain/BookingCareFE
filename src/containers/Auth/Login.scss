@@ -1,4 +1,4 @@
-.login-background{
+.login-background {
     height: 100vh;
     background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 
@@ -26,12 +26,13 @@
                 color: #000;
             }
 
-            .login-input{
+            .login-input {
                 margin: 7px 0;
             }
 
-            .btn-login{
-                width: 100%;
+            .btn-login {
+                width: 380px;
+                margin-left: 15px !important;
                 margin: 10px 0;
                 height: 35px;
                 color: white;
@@ -42,18 +43,18 @@
                 background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
             }
 
-            .forgot-password{
+            .forgot-password {
                 font-size: 12px;
             }
 
-            .social-login{
+            .social-login {
                 display: flex;
                 text-align: center;
                 justify-content: center;
                 margin-top: 10px;
 
 
-                .google{
+                .google {
                     font-size: 30px;
                     background-color: red;
                     border-radius: 50%;
@@ -66,7 +67,7 @@
                     margin-right: 10px;
                 }
 
-                .facebook{
+                .facebook {
                     font-size: 30px;
                     background-color: #307aaf;
                     border-radius: 50%;

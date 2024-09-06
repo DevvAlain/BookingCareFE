@@ -27,7 +27,56 @@ const editUserService = (inputData) => {
 
 const getAllCodeService = (inputType) => {
     return axios.get(`/api/allcode?type=${inputType}`);
-}
+};
 
-export { handleLoginApi, getAllUsers, createNewUserService, 
-        deleteUserService, editUserService,getAllCodeService };
+const getTopDoctorHomeService = (limit) => {
+    return axios.get(`/api/top-doctor-home?limit=${limit}`);
+};
+
+const getAllDoctors = () => {
+    return axios.get(`/api/get-all-doctor`);
+};
+
+const saveDetailDoctor = (data) => {
+    return axios.post('/api/save-infor-doctors', data);
+};
+
+const getDetailInfoDoctor = (id) => {
+    return axios.get(`/api/get-detail-doctor-by-id?id=${id}`);
+};
+
+const createScheduleDoctor = (data) => {
+    return axios.post('/api/create-schedule', data);
+};
+
+const getScheduleDoctorByDate = (doctorId, date) => {
+    return axios.get(`/api/get-schedule-doctor-by-date?doctorId=${doctorId}&date=${date}`);
+};
+
+const getExtraInfoDoctorById = (doctorId) => {
+    return axios.get(`/api/get-extra-info-doctor-by-id?doctorId=${doctorId}`);
+};
+
+const getProfileDoctorById = (doctorId) => {
+    return axios.get(`/api/get-profile-doctor-by-id?doctorId=${doctorId}`);
+};
+
+const createPatientBookingAppointment = (data) => {
+    return axios.post('/api/patient-book-appointment', data);
+};
+
+const postVerifyBookAppointment = (data) => {
+    return axios.post('/api/verify-book-appointment', data);
+};
+
+const createNewSpecialty = (data) => {
+    return axios.post('/api/create-new-specialty', data);
+};
+export {
+    handleLoginApi, getAllUsers, createNewUserService,
+    deleteUserService, editUserService, getAllCodeService,
+    getTopDoctorHomeService, getAllDoctors, saveDetailDoctor,
+    getDetailInfoDoctor, createScheduleDoctor, getScheduleDoctorByDate,
+    getExtraInfoDoctorById, getProfileDoctorById, createPatientBookingAppointment,
+    postVerifyBookAppointment, createNewSpecialty
+};

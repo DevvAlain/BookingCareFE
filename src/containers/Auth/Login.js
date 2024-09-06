@@ -38,17 +38,16 @@ class Login extends Component {
             errMsg: ''
         })
         try {
-           let data = await handleLoginApi(this.state.username, this.state.password);
-           if (data && data.errCode !==0) {
+            let data = await handleLoginApi(this.state.username, this.state.password);
+            if (data && data.errCode !== 0) {
                 this.setState({
                     errMsg: data.message
                 })
-           } 
-           if (data && data.errCode === 0) {
+            }
+            if (data && data.errCode === 0) {
                 this.props.userLoginSuccess(data.user);
-                console.log('loging success');
                 this.props.history.push('/');
-           }
+            }
         } catch (e) {
             if (e.response) {
                 if (e.response.data) {
@@ -58,6 +57,13 @@ class Login extends Component {
                 };
             };
             console.error(e.response ? e.response.data : e.message); // Log error response data
+        }
+    };
+
+    handleKeyDown = (event) => {
+        if (event.key === 'Enter' || event.key === 13) {
+            this.handleLogin();
+            return;
         }
     }
 
@@ -84,6 +90,7 @@ class Login extends Component {
                                 className='form-control'
                                 placeholder='Enter your password'
                                 onChange={(e) => { this.handleOnChangePassword(e) }}
+                                onKeyDown={(event) => this.handleKeyDown(event)}
                             />
                         </div>
                         <div>
