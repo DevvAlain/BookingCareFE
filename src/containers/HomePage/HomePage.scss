@@ -72,6 +72,7 @@ body {
             transition: transform 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            cursor: pointer;
 
             &:hover {
                 transform: translateY(-5px);
@@ -87,7 +88,7 @@ body {
                 border-radius: 10px;
 
                 &.section-specialty {
-                    background-image: url('../../assets/specialty/co-xuong-khop.jpg');
+                    // background-image: url('../../assets/specialty/co-xuong-khop.jpg');
                 }
 
                 &.section-medical-facility {
@@ -126,6 +127,18 @@ body {
                 }
             }
         }
+
+        .specialty-child {
+            .specialty-name {
+                font-size: 18px;
+                font-weight: 500;
+                margin-top: 5px;
+
+                &:hover {
+                    color: #45c3d2;
+                }
+            }
+        }
     }
 }
 
@@ -148,6 +161,7 @@ body {
 
         .content-left {
             flex: 1;
+
             iframe {
                 width: 100%;
                 border-radius: 15px;
@@ -157,6 +171,7 @@ body {
 
         .content-right {
             flex: 1;
+
             p {
                 font-size: 16px;
                 font-style: italic;
@@ -188,7 +203,8 @@ body {
 }
 
 /* Slick Slider Customizations */
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
     z-index: 1000 !important;
     height: 48px !important;
     width: 48px !important;
@@ -207,7 +223,8 @@ body {
     display: none !important;
 }
 
-.slick-prev::before, .slick-next::before {
+.slick-prev::before,
+.slick-next::before {
     font-family: FontAwesome !important;
     color: #ff6f61 !important;
     font-size: 20px !important;
