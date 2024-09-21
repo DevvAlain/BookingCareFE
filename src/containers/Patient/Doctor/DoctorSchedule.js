@@ -25,29 +25,36 @@ class DoctorSchedule extends Component {
         this.setState({
             allDays: allDays,
         });
+    };
+
+
+    capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    ;
 
     getArrDays = (language) => {
         let allDays = [];
         for (let i = 0; i < 7; i++) {
             let object = {};
-            let currentDate = moment(new Date()).add(i, 'days');
             if (language === LANGUAGES.VI) {
                 if (i === 0) {
-                    object.label = 'Hôm nay - ' + currentDate.format('DD/MM');
+                    let ddMM = moment(new Date()).format('DD/MM');
+                    let today = `Hôm nay - ${ddMM}`;
+                    object.label = today;
                 } else {
-                    object.label = currentDate.format('dddd - DD/MM');
-                    object.label = object.label.charAt(0).toUpperCase() + object.label.slice(1);
+                    let labeVi = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
+                    object.label = this.capitalizeFirstLetter(labeVi)
                 }
             } else {
                 if (i === 0) {
-                    object.label = 'Today - ' + currentDate.locale('en').format('DD/MM');
+                    let ddMM = moment(new Date()).format('DD/MM');
+                    let today = `Today - ${ddMM}`;
+                    object.label = today;
                 } else {
-                    object.label = currentDate.locale('en').format('dddd - DD/MM');
+                    object.label = moment(new Date()).add(i, 'days').locale('en').format('ddd - DD/MM')
                 }
             }
-            object.value = currentDate.startOf('day').valueOf();
+            object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
             allDays.push(object);
         }
         return allDays;

@@ -1,0 +1,133 @@
+div._loading_overlay_wrapper {
+    position: unset;
+
+    ._loading_overlay_wrapper {
+        z-index: 10000000;
+    }
+}
+
+.manage-patient-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.m-p-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.manage-patient-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+}
+
+.table-manage-patient {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+}
+
+th {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+td {
+    color: #666;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.no-data {
+    text-align: center;
+    color: #999;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.btn-confirm,
+.btn-remedy {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirm {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-confirm:hover {
+    background-color: #218838;
+}
+
+.btn-remedy {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-remedy:hover {
+    background-color: #e0a800;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .manage-patient-body {
+        flex-direction: column;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .btn-confirm,
+    .btn-remedy {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}

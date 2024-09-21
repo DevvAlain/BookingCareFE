@@ -6,7 +6,8 @@ import { getDetailInfoDoctor } from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfo from './DoctorExtraInfo';
-
+import Comment from '../SocialPlugin/Comment';
+import LikeAndShare from '../SocialPlugin/LikeAndShare';
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
@@ -39,6 +40,9 @@ class DetailDoctor extends Component {
             nameVi = `${detailDoctor.positionData.valueVi}, ${detailDoctor.lastName} ${detailDoctor.firstName}`;
             nameEn = `${detailDoctor.positionData.valueEn}, ${detailDoctor.firstName} ${detailDoctor.lastName}`;
         }
+
+        let currentURL = process.env.REACT_APP_IS_LOCALHOST === 1 ?
+            "https://eric-restaurant-bot-tv.herokuapp.com/" : window.location.href;
         return (
             <Fragment>
                 <HomeHeader isShowBanner={false} />
@@ -52,8 +56,14 @@ class DetailDoctor extends Component {
                                 </h2>
                                 <p className='doctor-description'>
                                     {detailDoctor?.Markdown?.description || 'No description available'}
+                                    <div className='like-share-plugin'>
+                                        <LikeAndShare
+                                            dataHref={currentURL}
+                                        />
+                                    </div>
                                 </p>
                             </div>
+
                         </div>
                         <div className='doctor-schedule'>
                             <div className='content-left'>
@@ -73,7 +83,12 @@ class DetailDoctor extends Component {
                             }
                         </div>
                         <div className='doctor-comments'>
-                            {/* Comments Section (To be added) */}
+                            <div class="fb-comments"
+                                data-href="https://developers.facebook.com/docs/plugins/comments#configurator"
+                                data-width=""
+                                data-numposts="5">
+
+                            </div>
                         </div>
                     </div>
                 </div>
